@@ -15,23 +15,25 @@ export default function Posts(){
             .get(url)
             .then(
                 response => {
-                setPosts(...response.data.posts)
+                setPosts([...response.data.posts])
                 }
             )
         }
     ,[])
 
     return (
-        
 			<ul className="posts">
 				{posts.map(post=>{
                     return (
-                        <Post key={post.id} thumbnail={post.thumbnail} category={post.category} title={post.title} profileImg={post.profileImg} created={post.created} userName={post.userName} contents={post.contents[0]['text']}/>
-                            
-
+                        <Post key={post.id} 
+                        thumbnail={post.thumbnail} 
+                        category={post.category} 
+                        title={post.title} 
+                        profileImg={post.profileImg} 
+                        created={post.created} 
+                        userName={post.userName} 
+                        contents={post.contents[0]['text']}/>
                         )
-
-                    
                 })}
 			</ul>
 
