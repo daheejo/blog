@@ -20,7 +20,7 @@ export default function Posts(){
             )
         }
     ,[])
-
+        console.log(posts);
     return (
 			<ul className="posts">
 				{posts.map(post=>{

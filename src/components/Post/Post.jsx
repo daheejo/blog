@@ -7,15 +7,16 @@ import './post.css'
 
 
 export default function Post(props) {
+  let url = `${process.env.PUBLIC_URL}${props.thumbnail}`;
     return (
         <li key={props.id}>
           <Link to="/post" className='post'>
             <article>
-              <img src={props.thumbnail} alt="" />
+              <img src={url} alt="" />
               <div class="contents-wrap">
                 <Category category={props.category} />
                 <h3>{props.title}</h3>
-                <Author author={props.username}/>
+                <Author author={props.userName} created={props.created}/>
                 <p class="post-description">{props.contents}</p>
               </div>
             </article>
