@@ -1,15 +1,14 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter ,Route } from 'react-router-dom';
 import GlobalStyle from './GlobalStyle'
-import Header from "./components/Header/Header";
-import Banner from './components/Banner/Banner'
+import Homepage from './pages/Homepage/Homepage';
 
 function App() {
 	return (
-		<Router>
+		<BrowserRouter>
 		<GlobalStyle/>
-		<Header />
-		<Banner />
-		</Router>
+		<Homepage />
+		</BrowserRouter>
 	)
 }
 
