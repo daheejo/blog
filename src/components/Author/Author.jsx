@@ -1,7 +1,6 @@
 import './author.css'
 
 export default function Author(props){
-    console.log(props);
     return (
     <dl className="author-wrap">
         <dt className="a11y-hidden">Author</dt>
