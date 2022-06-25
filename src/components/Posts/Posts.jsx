@@ -8,7 +8,7 @@ import axios from 'axios'
 export default function Posts(){
     const [posts, setPosts] = useState([])
 
-    const url = 'https://daheejo.github.io/blog/public/data.json'
+    const url = '/data.json'
 
     useEffect(()=>{
         axios
@@ -20,7 +20,7 @@ export default function Posts(){
             )
         }
     ,[])
-        console.log(posts);
+
     return (
 			<ul className="posts">
 				{posts.map(post=>{
