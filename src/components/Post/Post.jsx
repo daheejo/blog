@@ -1,6 +1,4 @@
-import { useState,useEffect } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link,Route } from 'react-router-dom'
 import Category from '../Category/Category'
 import Author from '../Author/Author'
 import './post.css'
@@ -12,7 +10,7 @@ export default function Post(props) {
         <li key={props.id}>
           <Link to="/post" className='post'>
             <article>
-              <img src={url} alt="" />
+              <img src={url} alt="썸네일이미지" />
               <div class="contents-wrap">
                 <Category category={props.category} />
                 <h3>{props.title}</h3>
