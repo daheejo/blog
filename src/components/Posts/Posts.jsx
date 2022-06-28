@@ -1,29 +1,12 @@
 import './posts.css'
-import { useEffect, useState } from 'react'
 import Post from '../Post/Post'
-import axios from 'axios'
 
 
 
-export default function Posts(){
-    const [posts, setPosts] = useState([])
-
-    const url = '/data.json'
-
-    useEffect(()=>{
-        axios
-            .get(url)
-            .then(
-                response => {
-                setPosts([...response.data.posts])
-                }
-            )
-        }
-    ,[])
-
+export default function Posts(props){
     return (
 			<ul className="posts">
-				{posts.map(post=>{
+				{props.posts.map(post=>{
                     return (
                         <Post key={post.id} 
                         thumbnail={post.thumbnail} 
