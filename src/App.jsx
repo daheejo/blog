@@ -22,12 +22,18 @@ function App() {
         }
     ,[])
 
+	const [isLogin, setLogin] = useState(false)
+
+    let handleLogin=()=>{
+        isLogin? setLogin(false):setLogin(true)
+    }
+
 	return (
 		<BrowserRouter>
 		<GlobalStyle/>
 		<Switch>
 			<Route path='/'>
-				<Homepage posts={posts}/>
+				<Homepage posts={posts} isLogin={isLogin} handleLogin={handleLogin}/>
 			</Route>
 			<Route path='/post'>
 				<PostView posts={posts}/>
