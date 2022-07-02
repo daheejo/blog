@@ -32,10 +32,10 @@ function App() {
 		<BrowserRouter>
 		<GlobalStyle/>
 		<Switch>
-			<Route path='/'>
+			<Route exact path='/'>
 				<Homepage posts={posts} isLogin={isLogin} handleLogin={handleLogin}/>
 			</Route>
-			<Route path='/post'>
+			<Route exact path='/post'>
 				<PostView posts={posts}/>
 			</Route>
 		</Switch>
