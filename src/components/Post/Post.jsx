@@ -8,7 +8,7 @@ export default function Post(props) {
   let url = `${process.env.PUBLIC_URL}${props.thumbnail}`;
     return (
         <li key={props.id}>
-          <Link to="/post" className='post'>
+          <Link to={`/post/${props.id}`} className='post'>
             <article>
               <img src={url} alt="썸네일이미지" />
               <div class="contents-wrap">

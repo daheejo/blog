@@ -14,7 +14,7 @@ export default function Header(props) {
 	<header>
 			<div className="max-width">
 				<h1>
-					<Link to="./">
+					<Link to="./blog">
 						<img src={require("../../assets/Logo.svg").default} alt="My Blog" />
 					</Link>
         		</h1>

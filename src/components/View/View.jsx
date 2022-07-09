@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import Author from '../Author/Author'
 import Category from '../Category/Category'
 
-export default function View(){
+export default function View(props){
+	console.log("View props", props);
     return (
         <div class="view">
 			<div class="max-width">

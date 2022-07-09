@@ -9,6 +9,7 @@ export default function Posts(props){
 				{props.posts.map(post=>{
                     return (
                         <Post key={post.id} 
+                        id={post.id}
                         thumbnail={post.thumbnail} 
                         category={post.category} 
                         title={post.title} 
